@@ -1,0 +1,38 @@
+uuid: f194ec78-f8d1-4469-a4dd-6a8fa937fa6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.exercise
+    - node.type.solution
+    - node.type.course
+  module:
+    - comment
+    - dropzonejs
+    - entity_browser
+    - media
+    - node
+id: formateur
+label: Formateur
+weight: 4
+is_admin: null
+permissions:
+  - 'access assets_browser_images entity browser pages'
+  - 'access browse_files entity browser pages'
+  - 'access browse_files_modal entity browser pages'
+  - 'access comments'
+  - 'create exercise content'
+  - 'create solution content'
+  - 'delete own exercise content'
+  - 'dropzone upload files'
+  - 'edit own comments'
+  - 'edit own exercise content'
+  - 'edit own solution content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'access courses_media entity browser pages'
+  - 'access media_browser entity browser pages'
+  - 'create course content'
+  - 'delete own course content'
+  - 'edit own course content'
+  - 'view media'

@@ -1,0 +1,27 @@
+course_form.course.create:
+  path: '/node/add/{node_type}'
+  defaults:
+    _entity_form: 'node.create'
+    _title_callback: '\Drupal\node\Controller\NodeController::addPageTitle'
+  requirements:
+    _node_add_access: 'node:{node_type}'
+  options:
+    _node_operation_route: TRUE
+    parameters:
+      node_type:
+        type: entity:node_type
+        with_config_overrides: TRUE
+
+course_form.course.edit:
+  path: '/node/{node}/edit'
+  defaults:
+    _entity_form: 'node.edit'
+  requirements:
+    _node_add_access: 'node:{node_type}'
+  options:
+    _node_operation_route: TRUE
+    parameters:
+      node_type:
+        type: entity:node_type
+        with_config_overrides: TRUE
+

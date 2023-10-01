@@ -1,0 +1,33 @@
+uuid: 492e8123-633f-41c1-823f-d9e2a17b8150
+langcode: en
+status: true
+dependencies:
+  module:
+    - feedback_form
+    - system
+    - user
+  theme:
+    - sqliTrainingFront
+id: feedbackblock
+theme: sqliTrainingFront
+region: content_bottom
+weight: -7
+provider: null
+plugin: feedback_block
+settings:
+  id: feedback_block
+  label: ' feedback block'
+  label_display: '0'
+  provider: feedback_form
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      stagiaire: stagiaire

@@ -1,0 +1,21 @@
+uuid: 2eb9f8b4-84e5-4339-9ccd-8fac95c04f6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_service_icon
+    - node.type.service
+  module:
+    - fontawesome
+id: node.service.field_service_icon
+field_name: field_service_icon
+entity_type: node
+bundle: service
+label: service_icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

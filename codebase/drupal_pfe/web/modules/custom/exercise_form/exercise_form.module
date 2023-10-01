@@ -1,0 +1,25 @@
+<?php
+/**
+ * Implements hook_form_alter().
+ */
+function exercise_form_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+    $form['revision_information']['#access'] = false;
+}
+function solution_form_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  $form['revision_information']['#access'] = false;
+}
+
+/**
+ * @param array $entity_types
+ */
+function exercise_form_entity_type_build(array &$entity_types) {
+  $form_modes = [ 'create','edit', 'default'];
+  foreach ($form_modes as $mode) {
+    $entity_types['node']->setFormClass($mode, 'Drupal\node\NodeForm');
+  }
+}
+
+
+

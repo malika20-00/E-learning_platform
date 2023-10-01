@@ -1,0 +1,52 @@
+name: Training
+type: profile
+description: 'Training to learn more programming language , Frameworks , CMS...'
+core_version_requirement: '^9'
+install:
+  - node
+  - block
+  - dblog
+  - page_cache
+  - dynamic_page_cache
+  - devel
+  - pathauto
+  - webform
+  - admin_toolbar
+  - history
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  - comment
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - big_pipe
+  - taxonomy
+  - search
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views
+  - views_ui
+  - tour
+  - automated_cron
+  - content_translation
+  - language
+  - config_translation
+  - locale
+  - config_perms
+
+themes:
+  - bartik
+  - seven

@@ -1,0 +1,8 @@
+uuid: 98a54e0d-63ec-405f-9397-b01d4b99b354
+langcode: en
+status: true
+dependencies: {  }
+name: Topic
+vid: libele
+description: 'Topic of courses'
+weight: 0

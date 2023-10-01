@@ -1,0 +1,181 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 9 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzone",
+                "version": "5.7.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "desandro/masonry",
+                "version": "3.3.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/masonry/archive/v3.3.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "desandro/imagesloaded",
+                "version": "3.1.8",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/desandro/imagesloaded/archive/v3.1.8.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "modules/contrib/{$name}": [
+                "type:drupal-module"
+            ]
+        }
+    },
+    "require": {
+        "composer/installers": "^1.9",
+        "desandro/imagesloaded": "^3.1",
+        "desandro/masonry": "^3.3",
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/adminimal_theme": "^1.6",
+        "drupal/allowed_formats": "^1.5",
+        "drupal/block_class": "^1.3",
+        "drupal/coder": "^8.3",
+        "drupal/config_perms": "^2.0",
+        "drupal/contact_storage": "^1.2",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-project-message": "^9.3",
+        "drupal/core-recommended": "^9.3",
+        "drupal/ctools": "^3.7",
+        "drupal/devel": "^4.1",
+        "drupal/devel_kint_extras": "^1.0",
+        "drupal/dropzonejs": "^2.6",
+        "drupal/embed": "^1.5",
+        "drupal/entity_browser": "^2.8",
+        "drupal/entity_embed": "^1.2",
+        "drupal/file_browser": "^1.3",
+        "drupal/filebrowser": "^3.0",
+        "drupal/fontawesome": "^2.23",
+        "drupal/fontawesome_menu_icons": "^1.9",
+        "drupal/imagemagick": "^3.3",
+        "drupal/lang_dropdown": "^2.0",
+        "drupal/languageicons": "^1.0@beta",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_source_csv": "^3.5",
+        "drupal/migrate_tools": "^6.0",
+        "drupal/nodeaccess": "^1.1",
+        "drupal/paragraphs": "^1.14",
+        "drupal/paragraphs_grid": "^1.3",
+        "drupal/paragraphs_previewer": "^1.5",
+        "drupal/pathauto": "^1.10",
+        "drupal/pdfpreview": "^1.0",
+        "drupal/rebuild_cache_access": "^1.7",
+        "drupal/search_api": "^1.23",
+        "drupal/taxonomy_menu": "^3.5",
+        "drupal/twig_tweak": "^3.1",
+        "drupal/vani": "^8.1",
+        "drupal/webform": "^6.1",
+        "drupal/widget_type": "^1.5",
+        "enyo/dropzone": "^5.7",
+        "kint-php/kint": "^4.1"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/profiles/custom/{$name}": [
+                "type:drupal-custom-profile"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    },
+    "require-dev": {
+        "drush/drush": "^11.0"
+    }
+}

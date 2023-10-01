@@ -1,0 +1,22 @@
+uuid: 0b0716fd-bd29-4831-aec4-5f78be9613dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sqliTrainingFront
+_core:
+  default_config_hash: kigu8pTxXt1qGR2NJ5HHdC4G2G1wsDrIjLPKBT5wUBc
+id: sqliTrainingFront_content
+theme: sqliTrainingFront
+region: content
+weight: -11
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

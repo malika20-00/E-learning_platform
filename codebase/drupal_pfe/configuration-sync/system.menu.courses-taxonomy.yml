@@ -1,0 +1,8 @@
+uuid: 05af2c9b-88dc-4ece-a123-d1cbe961f538
+langcode: en
+status: true
+dependencies: {  }
+id: courses-taxonomy
+label: 'Courses taxonomy'
+description: ''
+locked: false

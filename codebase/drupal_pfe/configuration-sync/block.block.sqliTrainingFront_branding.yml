@@ -1,0 +1,25 @@
+uuid: f761d6da-ad2b-4bdd-bd0c-ecb16a80e3cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sqliTrainingFront
+_core:
+  default_config_hash: d-0emr1mEq7sFKDu5RHUJckvNk62hvIZdRwPEfnJyGg
+id: sqliTrainingFront_branding
+theme: sqliTrainingFront
+region: hidden_blocks
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

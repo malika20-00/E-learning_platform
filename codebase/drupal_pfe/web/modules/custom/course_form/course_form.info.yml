@@ -1,0 +1,5 @@
+name: 'Course Form '
+description: 'Provides Form for course content type'
+core_version_requirement: ^9
+type: module
+package: Custom

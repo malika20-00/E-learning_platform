@@ -1,0 +1,32 @@
+<?php
+
+
+/**
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ */
+function custom_webform_form_alter(&$form, &$form_state, $form_id)
+{
+  if ($form_id == 'webform_submission_add_quiz_add_form') {
+// add class to tag <form>
+
+
+//    $form['#input']['class'][] = 'quiz-styles';
+
+
+  $form['actions']['submit']['#value'] = 'Send';
+
+
+//    $form['pick_one_option']['#wrapper_attributes']['class'][] = 'quiz-styles';
+
+
+
+  }
+
+
+
+}
+
+
+?>

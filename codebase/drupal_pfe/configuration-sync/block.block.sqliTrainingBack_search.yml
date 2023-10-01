@@ -1,0 +1,23 @@
+uuid: 0cf0f31a-6d8d-4c6f-9f91-8540603b3feb
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - sqliTrainingBack
+_core:
+  default_config_hash: jQ-C8l3dJPqYCGST1e-kSjR14PDP4wq-iFbp8dMFcRo
+id: sqliTrainingBack_search
+theme: sqliTrainingBack
+region: header
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  label_display: visible
+  provider: search
+  page_id: node_search
+visibility: {  }

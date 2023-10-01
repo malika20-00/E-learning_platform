@@ -1,0 +1,10 @@
+uuid: 3349b5f8-83d5-4e11-98bf-224ae21499ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.quiz
+label: quiz
+targetEntityType: node
+cache: true

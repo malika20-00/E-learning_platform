@@ -1,0 +1,52 @@
+uuid: c3e94078-7378-411b-b6d8-d6231122f132
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.asset_browser
+  module:
+    - views
+name: courses_media
+label: 'Courses Media'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  b5a1ff98-3552-4da5-895b-06b22a275965:
+    id: media_image_upload
+    uuid: b5a1ff98-3552-4da5-895b-06b22a275965
+    label: 'Media Course'
+    weight: 1
+    settings:
+      submit_text: 'Select files'
+      upload_location: 'public://'
+      multiple: '1'
+      extensions: ' jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp4'
+      media_type: images
+  edd04aa3-fab4-422e-a7d9-7f0757783eb8:
+    id: view
+    uuid: edd04aa3-fab4-422e-a7d9-7f0757783eb8
+    label: view
+    weight: 2
+    settings:
+      submit_text: 'Select entities'
+      auto_select: false
+      view: asset_browser
+      view_display: entity_browser_1
+  37066ede-5efd-459b-b92d-17b282701504:
+    id: upload
+    uuid: 37066ede-5efd-459b-b92d-17b282701504
+    label: upload
+    weight: 3
+    settings:
+      submit_text: 'Select files'
+      upload_location: 'public://'
+      multiple: true
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp4'

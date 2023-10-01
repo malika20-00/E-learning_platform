@@ -1,0 +1,8 @@
+uuid: e8a0e9fb-0fcf-49f8-a15c-6cd94d9091cd
+langcode: en
+status: true
+dependencies: {  }
+id: exercises-taxonomy
+label: 'exercises taxonomy'
+description: ''
+locked: false

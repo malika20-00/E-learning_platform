@@ -1,0 +1,47 @@
+<div class="container clear">
+  <div class="row">
+    <div class="col-lg-9 col-sm-6">
+      {{ title_prefix }}{{ content.field_content }}{{ content.field_level }}{{ content.field_category }}{{ content.field_media_image }}
+      <p id="file">{{ content.field_file }}</p>
+      {{ content.field_solution }}
+    </div>
+    <div class="col-lg-3 col-sm-6">
+      <div class="card" style="width: 18rem;">
+        <img src="{{ file_url(node.field_image_exercise.entity.fileuri) }}" class="card-img-top"/>
+        {% set createdDate = node.getCreatedTime|date('j F Y') %}<div class="card-body">
+          <h5 class="card-title">{{ author_name }}</h5>
+          <i class="icon-calendar"></i> {{ createdDate }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ content.field_comments }}
+
+  <div class="container">
+    <h1 class="view-title"> Related exercises </h1>
+    <div class="row">
+          {% for row in my_variable %}
+            <div class="col-4">
+              <div class="shadow-effect">
+                <a class="block-20 d-flex align-items-start" style="background-image: url({{file_url(row.field_image_exercise.entity.uri.value)}})" >
+                  <div class="meta-date text-center p-2">
+                    {% set day = row.created.value |date('d') %}
+                    {% set month = row.created.value |date('M') %}
+                    {% set year = row.created.value |date('Y') %}
+                    <span class="day">{{ day }}</span>
+                    <span class="mos">{{ month }}.</span>
+                    <span class="yr">{{ year }}</span>
+                  </div>
+                </a>
+                <div class="item-details align-items-stretch">
+                  <h5>{{ row.title.value|raw }} </h5>
+                  <p class ="">{{ row.field_content.value|raw|striptags|slice(0,190)}}... </p>
+                  <button type="button" id="item-btn"><a href="/node/{{ row.nid.value }}"> Read more </a> </button>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+  </div>
+

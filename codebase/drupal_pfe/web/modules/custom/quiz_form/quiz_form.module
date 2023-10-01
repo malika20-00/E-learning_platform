@@ -1,0 +1,13 @@
+<?php
+
+
+/**
+* @param array $entity_types
+*/
+function quiz_form_entity_type_build(array &$entity_types) {
+$form_modes = ['create', 'edit', 'default'];
+
+foreach ($form_modes as $mode) {
+$entity_types['node']->setFormClass($mode, 'Drupal\node\NodeForm');
+}
+}

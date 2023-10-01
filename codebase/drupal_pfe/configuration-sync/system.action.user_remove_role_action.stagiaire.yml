@@ -1,0 +1,14 @@
+uuid: 6efd26c9-b426-4a1a-b4c2-e30bce5238ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.stagiaire
+  module:
+    - user
+id: user_remove_role_action.stagiaire
+label: 'Remove the Stagiaire role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: stagiaire

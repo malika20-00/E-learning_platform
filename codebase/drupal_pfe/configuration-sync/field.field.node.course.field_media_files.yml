@@ -1,0 +1,27 @@
+uuid: f01bdadd-f068-4626-ae26-12a52790d211
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_files
+    - node.type.course
+  module:
+    - file
+id: node.course.field_media_files
+field_name: field_media_files
+entity_type: node
+bundle: course
+label: 'Media files'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf jpg png jpeg'
+  max_filesize: ''
+  description_field: false
+field_type: file

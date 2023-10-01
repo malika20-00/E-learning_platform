@@ -1,0 +1,87 @@
+{#
+/**
+ * @file
+ * Theme override for views to display rows in a grid.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapping element.
+ * - title: The title of this group of rows.
+ * - view: The view object.
+ * - rows: The rendered view results.
+ * - options: The view plugin style options.
+ *   - row_class_default: A flag indicating whether default classes should be
+ *     used on rows.
+ *   - col_class_default: A flag indicating whether default classes should be
+ *     used on columns.
+ * - items: A list of grid items. Each item contains a list of rows or columns.
+ *   The order in what comes first (row or column) depends on which alignment
+ *   type is chosen (horizontal or vertical).
+ *   - attributes: HTML attributes for each row or column.
+ *   - content: A list of columns or rows. Each row or column contains:
+ *     - attributes: HTML attributes for each row or column.
+ *     - content: The row or column contents.
+ *
+ * @see template_preprocess_views_view_grid()
+ */
+#}
+{%
+  set classes = [
+  'views-view-grid',
+  options.alignment,
+  'clearfix',
+]
+%}
+  {%
+    set row_classes = [
+    'row',
+    options.alignment == 'horizontal' ? 'clearfix',
+  ]
+  %}
+  {%
+    set col_classes = [
+    'col-md-4 col-xs-12 col-sm-6 col-lg-4 ml-3',
+    options.alignment == 'vertical' ? 'clearfix',
+  ]
+  %}
+
+
+
+<div{{ attributes.addClass(classes) }}>
+  {% if options.alignment == 'horizontal' %}
+    {% for row in items %}
+      <div{{ row.attributes.addClass(row_classes) }} style="flex-wrap: nowrap">
+        {% for column in row.content %}
+          <div{{ column.attributes.addClass(col_classes) }} id ="item">
+            <a class="block-20 d-flex align-items-start" style="background-image: url(' {{file_url(column.content['#row']._entity.fields.	field_image_course.entity.uri.value)}}')" >
+              <div class="meta-date text-center p-2">
+                {% set day = column.content['#row']._entity.fields.created.value |date('d') %}
+                {% set month = column.content['#row']._entity.fields.created.value |date('M') %}
+                {% set year = column.content['#row']._entity.fields.created.value |date('Y') %}
+                <span class="day">{{ day }}</span>
+                <span class="mos">{{ month }}.</span>
+                <span class="yr">{{ year }}</span>
+              </div>
+            </a>
+            <div class="item-details" id="det">
+              <h5>{{ column.content['#row']._entity.fields.title.value|raw }} </h5>
+              <p>{{ column.content['#row']._entity.fields.field_description.value|raw|striptags| slice(0, 200)}}...</p>
+              <button type="button" id="item-btn"><a href="/node/{{ column.content['#row']._entity.nid.value }}"> Read more </a> </button>
+              <button class="btn-action"><a href="http://127.0.0.1/node/{{ column.content['#row']._entity.nid.value }}/delete"><i class="fa fa-trash"> </i></a></button>
+              <button class="btn-action"> <a href="http://127.0.0.1/node/{{ column.content['#row']._entity.nid.value }}/edit"><i class="fa fa-edit"></i></a></button>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  {% else %}
+    {% for column in items %}
+      <div{{ column.attributes.addClass(col_classes) }}>
+        {% for row in column.content %}
+          <div{{ row.attributes.addClass(row_classes) }}>
+            {{- row.content -}}
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>

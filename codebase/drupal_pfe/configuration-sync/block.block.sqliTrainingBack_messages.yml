@@ -1,0 +1,22 @@
+uuid: 6c2e3fc5-6b92-463b-8fac-97ee94b2d81c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sqliTrainingBack
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: sqliTrainingBack_messages
+theme: sqliTrainingBack
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

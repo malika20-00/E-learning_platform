@@ -1,0 +1,25 @@
+uuid: 12e3697f-05ae-4e9d-a7b6-5b42e3b23afb
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:abe2346b-8f09-4172-86fa-281b03967464'
+  module:
+    - block_content
+  theme:
+    - sqliTrainingFront
+id: sqli
+theme: sqliTrainingFront
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:abe2346b-8f09-4172-86fa-281b03967464'
+settings:
+  id: 'block_content:abe2346b-8f09-4172-86fa-281b03967464'
+  label: SQLI
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

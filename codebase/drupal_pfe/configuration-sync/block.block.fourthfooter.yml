@@ -1,0 +1,25 @@
+uuid: 75a4d34f-1ae1-4a1e-be09-2df70fe693e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.fourth-footer
+  module:
+    - system
+  theme:
+    - sqliTrainingFront
+id: fourthfooter
+theme: sqliTrainingFront
+region: footer_fourth
+weight: 0
+provider: null
+plugin: 'system_menu_block:fourth-footer'
+settings:
+  id: 'system_menu_block:fourth-footer'
+  label: 'fourth footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

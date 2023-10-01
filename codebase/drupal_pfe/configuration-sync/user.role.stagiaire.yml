@@ -1,0 +1,21 @@
+uuid: a96c8a8e-8ff0-4ca0-b418-2a434b0b021b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.feedback
+  module:
+    - media
+    - comment
+    - node
+id: stagiaire
+label: Stagiaire
+weight: 5
+is_admin: null
+permissions:
+  - 'view media'
+  - 'access comments'
+  - 'create feedback content'
+  - 'edit own comments'
+  - 'post comments'
+  - 'skip comment approval'

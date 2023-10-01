@@ -1,0 +1,13 @@
+uuid: 46cac133-4b43-49cd-b423-5df2a88e8bd2
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: video
+description: 'media video type mp4 '
+source: video_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_file
+field_map: {  }

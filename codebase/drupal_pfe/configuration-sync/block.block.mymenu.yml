@@ -1,0 +1,29 @@
+uuid: e7995b15-4646-4c48-a8e2-c14d36bfc823
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.my-menu
+  module:
+    - system
+  theme:
+    - sqliTrainingFront
+id: mymenu
+theme: sqliTrainingFront
+region: sidebar_first
+weight: -12
+provider: null
+plugin: 'system_menu_block:my-menu'
+settings:
+  id: 'system_menu_block:my-menu'
+  label: 'My menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /all-courses

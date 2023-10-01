@@ -1,0 +1,12 @@
+uuid: 5aef59c4-20c3-4620-aa4a-64f1ae6b26fe
+langcode: en
+status: true
+dependencies: {  }
+id: contact_us
+label: 'Contact Us'
+recipients:
+  - amachmachi@sqli.com
+reply: ''
+weight: 0
+message: ''
+redirect: /contact/contact_us

@@ -1,0 +1,12 @@
+global-styling:
+  version: VERSION
+  css:
+    base:
+      css/sqliTrainingBack.css: {}
+
+google-fonts:
+  version: VERSION
+  css:
+    base:
+      css/sqliTrainingBack_fonts.css: {}
+

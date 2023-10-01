@@ -1,0 +1,7 @@
+Training.LoginForm:
+  path: '/login'
+  defaults:
+    _title: 'Login Form'
+    _form: '\Drupal\Training\Form\LoginForm'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,14 @@
+uuid: 801f2c02-8797-4c76-8ba8-a3eeaed87166
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.formateur
+  module:
+    - user
+id: user_add_role_action.formateur
+label: 'Add the Formateur role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: formateur

@@ -1,0 +1,8 @@
+name: Add Exercise
+description: create a page to add new content.
+package: Custom
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+

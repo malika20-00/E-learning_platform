@@ -1,0 +1,39 @@
+_core:
+  default_config_hash: CXhei_vpaZk-3f_Mj2cH0YmpK-ZpKHoSzVA3yZrDq0g
+definitions:
+  contact__site_page:
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  user__page:
+    weight: -41
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  user__logout:
+    weight: -42
+    menu_name: main
+    parent: ''
+    expanded: false
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__courses_taxonomy__1':
+    expanded: false
+    parent: 'admin:'
+    weight: 0
+    menu_name: account
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__courses_taxonomy__3':
+    expanded: false
+    parent: 'admin:'
+    weight: 1
+    menu_name: account
+    enabled: true
+  'taxonomy_menu__menu_link:taxonomy_menu__menu_link__courses_taxonomy__2':
+    expanded: false
+    parent: 'admin:'
+    weight: 2
+    menu_name: account
+    enabled: true

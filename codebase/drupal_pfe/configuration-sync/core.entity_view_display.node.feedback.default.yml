@@ -1,0 +1,30 @@
+uuid: b007df26-8c7b-4de4-8b20-d76f96d1af26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.feedback.body
+    - node.type.feedback
+  module:
+    - text
+    - user
+id: node.feedback.default
+targetEntityType: node
+bundle: feedback
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

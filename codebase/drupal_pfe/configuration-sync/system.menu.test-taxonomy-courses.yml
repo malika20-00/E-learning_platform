@@ -1,0 +1,8 @@
+uuid: 2eac0fb9-43b7-43af-88be-7f46fa3b93a9
+langcode: en
+status: true
+dependencies: {  }
+id: test-taxonomy-courses
+label: 'test taxonomy courses'
+description: ''
+locked: false

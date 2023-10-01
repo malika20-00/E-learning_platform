@@ -1,0 +1,39 @@
+uuid: 7881387e-2ff1-4e40-bcfc-f4d784878209
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.search_content
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - sqliTrainingFront
+id: exposedformsearch_contentpage_1
+theme: sqliTrainingFront
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:search_content-page_1'
+settings:
+  id: 'views_exposed_filter_block:search_content-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/my-exercises\r\n/search/content\r\n/all-exercises-page\r\n/all-exercises\r\n/taxonomy/exercises/term/*\r\n/my-courses"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      formateur: formateur
+      stagiaire: stagiaire

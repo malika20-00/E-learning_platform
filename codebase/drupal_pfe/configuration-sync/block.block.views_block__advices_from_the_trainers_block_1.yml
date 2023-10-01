@@ -1,0 +1,39 @@
+uuid: 0dbb3746-d70d-4a1e-a71b-768eea62359a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.advices_from_the_trainers
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - sqliTrainingFront
+id: views_block__advices_from_the_trainers_block_1
+theme: sqliTrainingFront
+region: content_bottom
+weight: -8
+provider: null
+plugin: 'views_block:advices_from_the_trainers-block_1'
+settings:
+  id: 'views_block:advices_from_the_trainers-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      formateur: formateur
+      stagiaire: stagiaire

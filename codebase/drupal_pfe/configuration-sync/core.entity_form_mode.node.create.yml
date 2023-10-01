@@ -1,0 +1,10 @@
+uuid: 8cd5a089-84fd-4263-9a41-e6be1536821c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.create
+label: create
+targetEntityType: node
+cache: true

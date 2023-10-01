@@ -1,0 +1,29 @@
+uuid: 364434be-bec8-4a33-a5a9-740f0da55cbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_file
+    - media.type.media
+    - node.type.exercise
+id: node.exercise.field_media_file
+field_name: field_media_file
+entity_type: node
+bundle: exercise
+label: 'Media file'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      media: media
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: media
+field_type: entity_reference

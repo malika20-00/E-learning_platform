@@ -1,0 +1,14 @@
+uuid: fec5d6c1-0f63-4bb8-a7fc-48478c856952
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.formateur
+  module:
+    - user
+id: user_remove_role_action.formateur
+label: 'Remove the Formateur role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: formateur

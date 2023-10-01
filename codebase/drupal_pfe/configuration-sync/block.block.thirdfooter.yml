@@ -1,0 +1,25 @@
+uuid: 826b1c77-82d7-4b79-82d6-53ddbe04ee94
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.third-footer
+  module:
+    - system
+  theme:
+    - sqliTrainingFront
+id: thirdfooter
+theme: sqliTrainingFront
+region: footer_third
+weight: 0
+provider: null
+plugin: 'system_menu_block:third-footer'
+settings:
+  id: 'system_menu_block:third-footer'
+  label: 'third footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

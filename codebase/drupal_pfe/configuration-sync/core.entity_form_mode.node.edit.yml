@@ -1,0 +1,10 @@
+uuid: fec482b0-c544-4060-ae42-3c10aec43ff1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.edit
+label: edit
+targetEntityType: node
+cache: true

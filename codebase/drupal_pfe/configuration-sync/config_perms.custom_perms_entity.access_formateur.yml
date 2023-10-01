@@ -1,0 +1,7 @@
+uuid: e3584065-8762-4a6b-b405-a14979aa8211
+langcode: en
+status: true
+dependencies: {  }
+id: access_formateur
+label: 'access formateur'
+route: Exercises.AddExerciseForm

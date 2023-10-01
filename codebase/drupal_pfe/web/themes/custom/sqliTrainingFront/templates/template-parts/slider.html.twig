@@ -1,0 +1,27 @@
+<section class="slider">
+  <div class="container-fluid slider-container">
+    <div class="slider-text">
+      <ul class="js-rotating">
+        {% if slider_code != '' %}
+          {{ slider_code | striptags('<ol>,<ul>,<li>,<p>,<a>,<img>,<video>,<h1>,<h2>,<h3>,<h4>,<h5>,<h6>,<em>,<strong>,<br>,<i>,<button>,<mark>,<hr>') | raw }}
+        {% else %}
+        <li>
+  				<h1>Let's start to <em>learn</em></h1>
+  				<a class="button-link" href="#">Get Started</a>
+  			</li>
+          <li>
+            <h1>With quality <em>courses</em></h1>
+            <a class="button-link" href="#">Get Started</a>
+          </li>
+        {% endif %}
+      </ul> <!--/.home-slider -->
+    </div><!-- /slider-text -->
+    <div class="slider-image">
+      {% if slider_image_path != '' %}
+        <img src="{{ slider_image_path }}" alt="slider image" />
+      {% else %}
+        <img src="{{ directory }}/images/slider.svg" alt="slider image" />
+      {% endif %}
+    </div><!-- /slider-image -->
+  </div> <!--/.container -->
+</section>

@@ -1,0 +1,15 @@
+<?php
+use Drupal\Core\Block\BlockPluginInterface;
+
+
+function custom_login_form_alter(&$form, $form_id) {
+
+//- hide descriptions input
+
+    unset($form['name']['#description']);
+    unset($form['pass']['#description']);
+
+
+
+}
+

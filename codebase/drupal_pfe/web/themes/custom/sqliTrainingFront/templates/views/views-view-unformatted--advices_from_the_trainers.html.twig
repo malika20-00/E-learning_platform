@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+<section class="testimonial text-center">
+  <div class="container">
+    <div class="heading white-heading">
+      learners opinion
+    </div>
+    <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+      <div class="carousel-inner" role="listbox">
+
+{% for key,row in rows %}
+        {% if key == 0 %}
+  <div class="carousel-item active" >
+    {% else %}
+    <div class="carousel-item" >
+      {% endif %}
+      <div class="testimonial4_slide">
+        <img src="{{file_url(row.content['#row']._relationship_entities.uid.fields.user_picture.entity.uri.value)}}" class="img-circle img-responsive" />
+        <p> {{ row.content['#row']._entity.fields.body.value|raw }} </p>
+        <h4>{{ row.content['#row']._relationship_entities.uid.fields.name.value }}</h4>
+      </div>
+    </div>
+      {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+uuid: 97a3be69-a0c7-44a9-80d5-a366de604408
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sqliTrainingFront
+_core:
+  default_config_hash: y0bXRvKYQQKkf_RVxA3aOPGpIfKKsDOzzrWYCgjxJ9Y
+id: sqliTrainingFront_breadcrumbs
+theme: sqliTrainingFront
+region: page_header
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

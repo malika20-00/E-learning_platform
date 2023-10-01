@@ -1,0 +1,11 @@
+uuid: 18858dbc-c195-42cf-a967-e0d8db3e5a13
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.libele
+id: taxonomy_term.libele
+target_entity_type_id: taxonomy_term
+target_bundle: libele
+default_langcode: site_default
+language_alterable: false

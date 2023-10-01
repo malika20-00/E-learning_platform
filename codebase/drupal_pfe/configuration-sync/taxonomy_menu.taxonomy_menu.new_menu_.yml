@@ -1,0 +1,16 @@
+uuid: 26a08cc3-806c-43e4-9236-b87a52482538
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.courses-taxonomy
+    - taxonomy.vocabulary.drupal
+id: new_menu_
+label: 'new menu '
+vocabulary: drupal
+menu: courses-taxonomy
+expanded: false
+depth: 0
+menu_parent: 'admin:'
+description_field_name: null
+use_term_weight_order: true

@@ -1,0 +1,18 @@
+uuid: 45c6a1d8-4b6f-4a2d-9feb-3a3133bed385
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: feedback
+type: feedback
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

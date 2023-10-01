@@ -1,0 +1,33 @@
+uuid: 0ab4f4a1-12ce-469e-bfd2-30960111b4df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_images
+    - media.type.file
+    - media.type.images
+    - media.type.video
+    - node.type.course
+id: node.course.field_media_images
+field_name: field_media_images
+entity_type: node
+bundle: course
+label: 'Media Images'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      file: file
+      images: images
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: file
+field_type: entity_reference

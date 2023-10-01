@@ -1,0 +1,33 @@
+uuid: ce3ccc1d-73e0-4e83-aaf0-282ae5148f68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comments_course
+    - node.type.course
+  module:
+    - comment
+id: node.course.field_comments_course
+field_name: field_comments_course
+entity_type: node
+bundle: course
+label: Comments
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 5
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

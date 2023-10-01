@@ -1,0 +1,25 @@
+uuid: be45027a-3d4f-4303-8b59-811afafb65fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.second-footer
+  module:
+    - system
+  theme:
+    - sqliTrainingFront
+id: secondfooter
+theme: sqliTrainingFront
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:second-footer'
+settings:
+  id: 'system_menu_block:second-footer'
+  label: 'second footer'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

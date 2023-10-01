@@ -1,0 +1,29 @@
+uuid: 130381e7-0c28-47f5-bdc9-a2103a8f2fc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_level
+    - node.type.exercise
+    - taxonomy.vocabulary.level
+id: node.exercise.field_level
+field_name: field_level
+entity_type: node
+bundle: exercise
+label: level
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      level: level
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

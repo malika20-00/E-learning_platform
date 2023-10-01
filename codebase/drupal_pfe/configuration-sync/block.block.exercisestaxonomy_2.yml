@@ -1,0 +1,40 @@
+uuid: d5d417ab-3020-4b12-89e7-8b65495c6bbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.exercises-taxonomy
+  module:
+    - system
+    - user
+  theme:
+    - sqliTrainingFront
+id: exercisestaxonomy_2
+theme: sqliTrainingFront
+region: sidebar_first
+weight: -11
+provider: null
+plugin: 'system_menu_block:exercises-taxonomy'
+settings:
+  id: 'system_menu_block:exercises-taxonomy'
+  label: 'exercises taxonomy'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/all-exercises-page\r\n/my-exercises\r\n/search/content\r\n/all-exercises\r\n/my-courses\r\n/taxonomy/exercises/term/*"
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      formateur: formateur
+      stagiaire: stagiaire

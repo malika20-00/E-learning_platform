@@ -1,0 +1,11 @@
+uuid: dc42759a-a5ce-4051-8d18-31e6c6c77ce4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.exercise
+id: node.exercise
+target_entity_type_id: node
+target_bundle: exercise
+default_langcode: site_default
+language_alterable: false

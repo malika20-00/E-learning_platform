@@ -1,0 +1,14 @@
+uuid: 637bf4ca-e894-4b4c-8bde-bbece2347a9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.stagiaire
+  module:
+    - user
+id: user_add_role_action.stagiaire
+label: 'Add the Stagiaire role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: stagiaire

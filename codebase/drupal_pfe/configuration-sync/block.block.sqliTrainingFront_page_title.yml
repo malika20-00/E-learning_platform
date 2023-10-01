@@ -1,0 +1,20 @@
+uuid: 633f5fe3-042c-48db-9114-4d66e2d8a98b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sqliTrainingFront
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: sqliTrainingFront_page_title
+theme: sqliTrainingFront
+region: content
+weight: -13
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,16 @@
+uuid: cf5757d5-2125-42d4-94c8-c5317d350558
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.my-menu
+    - taxonomy.vocabulary.drupal
+id: taxonomy_menu
+label: taxonomy_menu
+vocabulary: drupal
+menu: my-menu
+expanded: false
+depth: 0
+menu_parent: 'admin:'
+description_field_name: null
+use_term_weight_order: true

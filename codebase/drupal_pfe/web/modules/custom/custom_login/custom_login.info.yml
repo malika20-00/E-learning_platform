@@ -1,0 +1,5 @@
+name: Custom Form Login
+type: module
+description: custom style form login
+core_version_requirement: ^9
+package: Custom

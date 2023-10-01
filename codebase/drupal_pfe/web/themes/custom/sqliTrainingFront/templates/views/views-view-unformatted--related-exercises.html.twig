@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{% if title %}
+  <h3>{{ title }}</h3>
+{% endif %}
+
+
+<section class="testimonials">
+  <div class="container">
+    <h1 class="view-title"> Related exercises </h1>
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="customers-testimonials" class="owl-carousel">
+          {% for row in my_variable %}
+            <div class="item">
+              <div class="shadow-effect">
+                <a class="block-20 d-flex align-items-start" style="background-image: url({{file_url(row.field_image_exercise.entity.uri.value)}})" >
+                  <div class="meta-date text-center p-2">
+                    {% set day = row.created.value |date('d') %}
+                    {% set month = row.created.value |date('M') %}
+                    {% set year = row.created.value |date('Y') %}
+                    <span class="day">{{ day }}</span>
+                    <span class="mos">{{ month }}.</span>
+                    <span class="yr">{{ year }}</span>
+                  </div>
+                </a>
+                <div class="item-details align-items-stretch">
+                  <h5>{{ row.title.value|raw }} </h5>
+                  <p class ="">{{ row.field_content.value|raw|striptags|slice(0,190)}}... </p>
+                  <button type="button" id="item-btn"><a href="/node/{{ row.nid.value }}"> Read more </a> </button>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

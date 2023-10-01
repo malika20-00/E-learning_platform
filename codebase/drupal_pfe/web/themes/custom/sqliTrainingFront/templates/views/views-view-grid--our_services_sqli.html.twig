@@ -1,0 +1,98 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{#
+/**
+ * @file
+ * Theme override for views to display rows in a grid.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the wrapping element.
+ * - title: The title of this group of rows.
+ * - view: The view object.
+ * - rows: The rendered view results.
+ * - options: The view plugin style options.
+ *   - row_class_default: A flag indicating whether default classes should be
+ *     used on rows.
+ *   - col_class_default: A flag indicating whether default classes should be
+ *     used on columns.
+ * - items: A list of grid items. Each item contains a list of rows or columns.
+ *   The order in what comes first (row or column) depends on which alignment
+ *   type is chosen (horizontal or vertical).
+ *   - attributes: HTML attributes for each row or column.
+ *   - content: A list of columns or rows. Each row or column contains:
+ *     - attributes: HTML attributes for each row or column.
+ *     - content: The row or column contents.
+ *
+ * @see template_preprocess_views_view_grid()
+ */
+#}
+{%
+  set classes = [
+  'views-view-grid',
+  options.alignment,
+  'clearfix',
+]
+%}
+  {%
+    set row_classes = [
+    'row our-offer-items less-carousel',
+    options.alignment == 'horizontal' ? 'clearfix',
+  ]
+  %}
+  {%
+    set col_classes = [
+    'col-md-4 col-sm-6 equal-height',
+    options.alignment == 'vertical' ? 'clearfix',
+  ]
+  %}
+
+<section class="we-offer-area text-center bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="site-heading text-center">
+          <h2>Our <span>Services</span></h2>
+        </div>
+      </div>
+    </div>
+
+    <div{{ attributes.addClass(classes) }}>
+      {% if options.alignment == 'horizontal' %}
+      {% for row in items %}
+      <div{{ row.attributes.addClass(row_classes) }}>
+        {% for column in row.content %}
+        <div{{ column.attributes.addClass(col_classes) }}>
+          <a href="{{ column.content['#row']._entity.fields.field_service_link[0].uri }}">
+        <div class="item">
+          <i class="fas fa-{{ column.content['#row']._entity.fields.field_service_icon[0].icon_name }}" ></i>
+          <h4>{{ column.content['#row']._entity.fields.title.value |raw }}</h4>
+          <p>
+            {{ column.content['#row']._entity.fields.body.value|raw }}
+          </p>
+        </div>
+          </a>
+        </div>
+
+          {% endfor %}
+        </div>
+      {% endfor %}
+          {% endif %}
+    </div>
+  </div>
+</section>
+

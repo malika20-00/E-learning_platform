@@ -1,0 +1,27 @@
+uuid: 5e48670f-25e7-49a9-b556-4941e1e015ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_file
+    - node.type.exercise
+  module:
+    - file
+id: node.exercise.field_file
+field_name: field_file
+entity_type: node
+bundle: exercise
+label: File
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file
